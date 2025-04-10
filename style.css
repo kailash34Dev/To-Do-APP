@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0%;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(135deg, #153677, #4e085f);
+}
+
+.todo-app {
+    max-width: 450px;
+    width: 90%;
+    margin: 100px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 20px;
+}
+
+@media (max-width: 380px) {
+    .todo-app {
+        width: 95%;
+    }
+}
+
+@media (max-width: 360px) {
+    .todo-app {
+        padding: 15px 20px;
+    }
+}
+
+.todo-title {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.todo-title img {
+    width: 30px;
+    height: auto;
+}
+
+.input-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 30px;
+    background-color: rgb(233, 233, 233);
+    border-radius: 50px;
+    height: 45px;
+}
+
+.input-row input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    height: 100%;
+    padding-left: 30px;
+}
+
+.input-row button {
+    border: none;
+    outline: none;
+    height: 100%;
+    padding: 0 35px;
+    border-radius: 50px;
+    background-color: #ff5945;
+    color: #fff;
+    cursor: pointer;
+}
+
+@media (max-width: 350px) {
+    .input-row button {
+        padding: 0 20px;
+    }
+}
+
+.input-row button:hover {
+    background-color: #fa483f;
+}
+
+.task-list {
+    margin-top: 35px;
+    list-style: none;
+    padding-left: 20px;
+}
+
+.task-list li {
+    padding-bottom: 15px;
+    color: rgb(60, 60, 60);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.task-list li::before {
+    margin-right: 20px;
+    content: "";
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background-image: url("images/unchecked.png");
+    background-size: cover;
+    background-position: center;
+}
+
+.checked {
+    text-decoration: line-through;
+    color: rgb(143, 143, 143);;
+}
+
+.task-list li.changeImg::before {
+    background-image: url("images/checked.png");
+}
+
+.delete-btn {
+    font-size: 20px;
+    color: rgb(116, 116, 116);
+    margin: 0px 20px 0px auto;
+    height: 30px;
+    width: 30px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.delete-btn:hover {
+    background-color: rgb(233, 233, 233);
+}
